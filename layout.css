@@ -33,21 +33,22 @@ main {
 /*************************************** menu ***********************/
 .menu {
   position: relative;
-  left: -10px;
+  left: -20px;
   display: flex;
   flex-direction: row;
-  gap: -100px;
-  flex-wrap: nowrap;
+  gap: 10px;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
 }
 .menu a {
-  padding: 12px 20px;
-  font-size: 1rem;
-  border-radius: 999px;
+  padding: 8px 12px;
+  font-size: 0.9rem;
+  border-radius: 50px;
   border-radius: 50px;
   transition: all 0.3s ease;
   font-weight: bold;
+  white-space: nowrap;
 }
 .menu a:hover {
   background-color: rgba(31, 122, 39, 0.45);
