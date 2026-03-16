@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <title>Comida</title>
+    <link rel="icon" href="img/logo.png">
+    <link rel="stylesheet" href="general.css">
+    <link rel="stylesheet" href="layout.css">
+</head>
+
+<body class="community-page">
+    <img class="palme_top" src="img/palm.png" alt="palm leaf">
+    <img class="palme_midte" src="img/palm.png" alt="palm leaf">
+    <img class="palme_bund_right" src="img/palm.png" alt="palm leaf">
+    <img class="palme_bund_left" src="img/palm.png" alt="palm leaf">
+    <header class="topbar">
+        <div class="logo">
+            <a href="index.html">
+                <img src="img/logo.png" alt="logo">
+            </a>
+        </div>
+
+        <nav class="menu">
+            <a href="opskrifter.html" class="link1"><span>OPSKRIFTER</span></a>
+            <a href="guide.html" class="link2"><span>GUIDE</span></a>
+            <a href="community.html" class="link3"><span>COMMUNITY</span></a>
+        </nav>
+    </header>
+    <main>
+        <section class="community">
+            <div class="grid_1-1">
+                <img class="top_img" src="img/community-img1.jpg" alt="together">
+                <img class="top_img" src="img/community-img2.jpg" alt="together">
+                <div class="purple-box"></div>
+                <img class="map-brasil"
+                    src="img/mapa_de_contorno_do_brasil_de_cor_verde__mapa_político_brasileiro-removebg-preview.png"
+                    alt="map-brasil">
+
+                <div class="forside-tekst">
+                    <h1>Community</h1>
+                </div>
+            </div>
+        </section>
+        <section class="community-section">
+            <h2>Velkommen til vores community</h2>
+
+            <p>
+                Her kan du foreslå opskrifter, dele dine egne retter og hjælpe med at gøre vores
+                brasilianske mad univers endnu større.
+            </p>
+
+            <div class="forms-container">
+                <div class="form-box">
+                    <div class="form-header">Send en opskrift</div>
+                    <form action="https://formspree.io/f/mvzwbwgo" method="POST" enctype="multipart/form-data">
+                        <input type="hidden" name="formtype" value="Opskrift">
+                        <label>Navn:</label>
+                        <input type="text" name="navn" required>
+
+                        <label>Email:</label>
+                        <input type="email" name="email" required>
+
+                        <label>Opskriftens navn:</label>
+                        <input type="text" name="opskrift" required>
+
+                        <label>Ingredienser:</label>
+                        <textarea name="ingredienser" required></textarea>
+
+                        <label>Upload billeder:</label>
+                        <input type="file" name="billede">
+
+                        <button class="community-button" type="submit">Send opskrift</button>
+                    </form>
+                </div>
+                <div class="form-box">
+                    <div class="form-header"> Foreslå en opskrift</div>
+
+                    <form action="https://formspree.io/f/mvzwbwgo" method="POST">
+                        <input type="hidden" name="formtype" value="Ide">
+                        <label>Hvilken opskrift savner du?</label>
+                        <input type="text" name="ide" required>
+
+                        <label>Beskrivelse:</label>
+                        <textarea class="small-box" name="beskrivelse" required></textarea>
+
+                        <button class="community-button" type="submit">Send ide</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer-content">
+            <p>© 2026 Comida</p>
+            <p>Kontakt: comida@gmail.com</p>
+        </div>
+    </footer>
+</body>
+
+</html>

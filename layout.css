@@ -1,0 +1,595 @@
+body {
+  position: relative;
+  overflow-x: hidden;
+}
+main {
+  padding-top: 5px;
+}
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+  gap: 12px;
+}
+.logo {
+  flex: 0 0 auto;
+}
+.logo img {
+  width: 90px;
+}
+.top_img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+.grid_1-1 {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 30px;
+  width: 100%;
+}
+/*************************************** menu ***********************/
+.menu {
+  position: relative;
+  left: -10px;
+  display: flex;
+  flex-direction: row;
+  gap: -100px;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+.menu a {
+  padding: 12px 20px;
+  font-size: 1rem;
+  border-radius: 999px;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  font-weight: bold;
+}
+.menu a:hover {
+  background-color: rgba(31, 122, 39, 0.45);
+  box-shadow: 0 0 12px rgba(31, 122, 39, 0.35);
+}
+/********************************* text ****************************/
+.forside {
+  position: relative;
+  width: 100%;
+  max-width: 700px;
+  margin: auto;
+}
+.forside-tekst {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  width: 80%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 3;
+}
+.forside-tekst h1 {
+  margin-top: 10px;
+}
+.forside-tekst p {
+  margin: 0;
+  position: relative;
+  top: -15px;
+}
+/********************* palme ********************/
+.palme_top,
+.palme_midte,
+.palme_bund_right,
+.palme_bund_left,
+.palme_opskrifter1,
+.palme_opskrifter2 {
+  position: absolute;
+  width: 180px;
+  pointer-events: none;
+  z-index: 10;
+}
+.palme_bund_left_guide {
+  position: absolute;
+  width: 180px;
+  pointer-events: none;
+  z-index: -1;
+}
+.palme_top {
+  top: 65px;
+  right: 0;
+}
+.palme_midte {
+  top: 250px;
+  left: 0;
+  transform: rotate(180deg);
+}
+.palme_bund_right {
+  bottom: 440px;
+  right: 0;
+}
+.palme_bund_left,
+.palme_bund_left_guide {
+  bottom: 120px;
+  left: 0;
+  transform: rotate(180deg);
+}
+.palme_opskrifter1 {
+  bottom: 850px;
+  left: -20px;
+  transform: rotate(180deg);
+}
+.palme_opskrifter2 {
+  bottom: 1200px;
+  right: 0;
+  transform: rotate(180deg);
+  transform: scaleX(1);
+}
+
+/************************************************/
+/*********************************** box **************************/
+.boxes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  padding: 20px;
+}
+.boxes p {
+  margin-top: 20px;
+}
+.box,
+.box_op {
+  padding: 25px 20px;
+  text-align: center;
+  border-radius: 25px;
+  min-height: 160px;
+}
+.box3 {
+  padding: 25px 20px;
+  grid-column: 1 / 3;
+  width: 50%;
+  justify-self: center;
+  border-radius: 25px;
+}
+.box_opskrifter {
+  padding: 24px 16px;
+  margin: 0 auto;
+}
+.opskrift-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+.box_op {
+  position: relative;
+  overflow: hidden;
+}
+.box_op img {
+  width: 100%;
+  display: block;
+  height: 320px;
+  object-fit: cover;
+}
+.knap-box {
+  position: absolute;
+  bottom: 55px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.opskrift-knap {
+  padding: 15px 30px;
+  border-radius: 50px;
+  text-decoration: none;
+  text-align: center;
+  display: inline-block;
+  min-width: 220px;
+}
+.opskrift-knap p {
+  margin-top: -12px;
+}
+.orange-box,
+.blue-box,
+.yellow-box,
+.purple-box {
+  position: absolute;
+  top: 36%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+  height: 110px;
+  border-radius: 60px;
+  opacity: 0.7;
+  z-index: 1;
+}
+.map-brasil {
+  position: absolute;
+  top: 45%;
+  left: 65%;
+  transform: translate(-50%, -50%);
+  width: 200px !important;
+  height: auto !important;
+  z-index: 2;
+  opacity: 0.7;
+}
+/*************************** community section *****************/
+.community-section {
+  text-align: center;
+  padding: 50px 20px;
+}
+.community-section h2 {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+.community-section p {
+  font-size: 16px;
+  margin-bottom: 40px;
+}
+.forms-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+.form-box {
+  background: white;
+  border-radius: 30px;
+  width: 320px;
+  padding-bottom: 30px;
+}
+.form-header {
+  background: #b13aa5;
+  color: white;
+  font-size: 28px;
+  padding: 20px;
+  border-radius: 30px 30px 0 0;
+  margin-bottom: 20px;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  padding: 0 25px;
+  text-align: left;
+}
+label {
+  margin-top: 15px;
+  margin-bottom: 5px;
+  font-size: 18px;
+}
+input,
+textarea {
+  background: #fff8e1;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 16px;
+}
+textarea {
+  height: 120px;
+  resize: none;
+}
+.small-box {
+  height: 80px;
+}
+.community-button {
+  margin-top: 20px;
+  background: #b13aa5;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 10px;
+  cursor: pointer;
+  width: 140px;
+  align-self: center;
+}
+/************************* slideshow **************************/
+.slideshow {
+  padding: 40px 20px;
+  text-align: center;
+}
+.slider {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.sliders {
+  position: relative;
+}
+.slide {
+  display: none;
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+.slide.aktiv {
+  display: block;
+}
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #e65100;
+  border: none;
+  padding: 12px 16px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 20px;
+  z-index: 2;
+}
+.prev {
+  left: 5px;
+}
+.next {
+  right: 5px;
+}
+/*****************************************************/
+/*************************** guide kort ****************/
+.guide-lokationer {
+  padding: 40px 20px 60px;
+  text-align: center;
+}
+
+.guide-lokationer h2 {
+  margin-bottom: 10px;
+}
+
+.guide-lokationer p {
+  max-width: 700px;
+  margin: 0 auto 25px;
+}
+
+.kort {
+  max-width: 700px;
+  margin: 0 auto 40px;
+}
+
+.kort iframe {
+  width: 100%;
+  height: 420px;
+  border: 0;
+  border-radius: 40px;
+}
+
+.lokationer-liste {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.lokationer-liste h3 {
+  margin-bottom: 20px;
+}
+
+.lokation-kort {
+  background: #e8bf4f;
+  border-radius: 20px;
+  padding: 18px 20px;
+  margin-bottom: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.lokation-tekst h4 {
+  margin: 0 0 6px;
+}
+
+.lokation-tekst p {
+  margin: 0;
+}
+
+.lokation-knap1,
+.lokation-knap2,
+.lokation-knap3 {
+  background: #2f8f2f;
+  color: white;
+  text-decoration: none;
+  padding: 12px 20px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+/************************* footer *********************/
+.footer {
+  background: #fff8e1;
+  color: #2f8f2f;
+  text-align: center;
+  padding: 30px 20px;
+}
+.footer p {
+  margin: 20px;
+}
+@media (min-width: 800px) {
+  .top_img {
+    width: 100%;
+    height: 500px;
+    display: block;
+  }
+  .topbar {
+    padding: 24px 32px;
+  }
+  .logo img {
+    width: 150px;
+  }
+  /************************* menu *******************/
+  .menu {
+    position: relative;
+    left: -400px;
+    gap: 40px;
+    justify-content: center;
+    flex-wrap: nowrap;
+  }
+  .menu a {
+    padding: 12px 28px;
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    overflow: visible;
+    border-radius: 999px;
+  }
+  .menu a::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300px;
+    height: 300px;
+    transform: translate(-50%, -50%);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 0;
+  }
+  .menu a span {
+    position: relative;
+    z-index: 1;
+  }
+  .menu a:hover::before {
+    opacity: 0.45;
+  }
+  .menu a:hover {
+    background: none;
+    box-shadow: none;
+  }
+  .link1::before {
+    background-image: url("img/menu_opskrifter.png");
+  }
+
+  .link2::before {
+    background-image: url("img/menu_guide.png");
+  }
+
+  .link3::before {
+    background-image: url("img/menu_community.png");
+  }
+  /******************** text ***********************/
+  .forside {
+    max-width: none;
+    display: block;
+    position: relative;
+  }
+  .forside-tekst {
+    font-size: 12rem;
+    top: 40%;
+  }
+  .forside-tekst h1 {
+    position: relative;
+    font-size: 10rem;
+    top: 40px;
+  }
+  .forside-tekst p {
+    position: relative;
+    top: 65%;
+    font-size: 1.3rem;
+  }
+  /******************** boxes *********************/
+  .boxes {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .box3 {
+    grid-column: auto;
+    width: 100%;
+  }
+  .box_op img {
+    height: 360px;
+  }
+  .opskrift-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+  .orange-box,
+  .blue-box,
+  .yellow-box,
+  .purple-box {
+    position: absolute;
+    top: 50%;
+    width: 55%;
+    height: 170px;
+    left: 50%;
+  }
+  .map-brasil {
+    width: 450px !important;
+    height: auto;
+    top: 50%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+  }
+  /******************** slideshow ***************/
+  .slide {
+    width: 70%;
+    height: 450px;
+    position: relative;
+    left: 15%;
+  }
+  .prev {
+    left: 70px;
+  }
+  .next {
+    right: 70px;
+  }
+  /*************************** palme ***************/
+  .palme_top,
+  .palme_midte,
+  .palme_bund_right,
+  .palme_bund_left,
+  .palme_bund_left_guide {
+    position: absolute;
+    width: 350px;
+    pointer-events: none;
+    z-index: 10;
+  }
+  .palme_top {
+    top: 0;
+    right: 0;
+  }
+  .palme_midte {
+    top: 300px;
+    left: 0;
+    transform: rotate(180deg);
+  }
+  .palme_bund_right {
+    bottom: 90px;
+    right: 0;
+  }
+  .palme_bund_left {
+    bottom: 0px;
+    left: -20px;
+    transform: rotate(180deg);
+  }
+  .palme_opskrifter1,
+  .palme_opskrifter2 {
+    display: none;
+  }
+
+  /**************************************/
+  /**************** guide kort ************/
+  .lokation-kort {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    height: 80px;
+  }
+  .lokationer-liste h3 {
+    position: relative;
+    left: 40px;
+  }
+  .lokation-knap1,
+  .lokation-knap3 {
+    position: absolute;
+    left: 850px;
+  }
+  .lokation-knap2 {
+    position: absolute;
+    left: 810px;
+  }
+  /****************** Community section *************/
+  .forms-container {
+    align-items: flex-start;
+  }
+  .community-section {
+    padding-top: 10px;
+  }
+}

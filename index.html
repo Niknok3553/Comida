@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <title>Comida</title>
+    <link rel="icon" href="img/logo.png">
+    <link rel="stylesheet" href="general.css">
+    <link rel="stylesheet" href="layout.css">
+</head>
+
+<body>
+    <img class="palme_top" src="img/palm.png" alt="palm leaf">
+    <img class="palme_midte" src="img/palm.png" alt="palm leaf">
+    <img class="palme_bund_right" src="img/palm.png" alt="palm leaf">
+    <img class="palme_bund_left" src="img/palm.png" alt="palm leaf">
+
+    <header class="topbar">
+        <div class="logo">
+            <a href="index.html">
+                <img src="img/logo.png" alt="logo">
+            </a>
+        </div>
+
+        <nav class="menu">
+            <a href="opskrifter.html" class="link1"><span>OPSKRIFTER</span></a>
+            <a href="guide.html" class="link2"><span>GUIDE</span></a>
+            <a href="community.html" class="link3"><span>COMMUNITY</span></a>
+        </nav>
+    </header>
+    <main>
+        <section class="forside">
+            <div class="grid_1-1">
+                <img class="top_img" src="img/rio.jpg" alt="rio">
+                <img class="top_img" src="img/cozinha.jpg" alt="cozinha">
+                <div class="orange-box"></div>
+                <img class="map-brasil"
+                    src="img/mapa_de_contorno_do_brasil_de_cor_verde__mapa_político_brasileiro-removebg-preview.png"
+                    alt="map-brasil">
+
+                <div class="forside-tekst">
+                    <h1>Comida</h1>
+                    <p>Find Ingredienser. Lær Opskrifter. Del Kulturen.</p>
+                </div>
+            </div>
+
+            <div class="boxes">
+                <div class="box">
+                    <h2>Opskrifter</h2>
+                    <p>Lær autentisk brasilianske opskrifter med
+                        trin-for-trin vejledninger.</p>
+                </div>
+                <div class="box">
+                    <h2>Guide</h2>
+                    <p>Lær autentisk brasilianske opskrifter med
+                        trin-for-trin vejledninger.</p>
+                </div>
+                <div class="box box3">
+                    <h2>Community</h2>
+                    <p>Del dine opskrifter, tips og tricks i vores hyggelige fællesskab af madentusiaster.</p>
+                </div>
+            </div>
+        </section>
+        <section class="slideshow">
+            <div class="slider">
+                <button class="prev" onclick="skiftSlide(-1)">❮</button>
+                <div class="sliders">
+                    <img class="slide aktiv" src="img/slideshow1.jpg" alt="slideshow1">
+                    <img class="slide" src="img/pão_de_queijo.jpg" alt="slideshow2">
+                    <img class="slide" src="img/slideshow3.jpg" alt="slideshow3">
+                </div>
+                <button class="next" onclick="skiftSlide(1)">❯</button>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer-content">
+            <p>© 2026 Comida</p>
+            <p>Kontakt: comida@gmail.com</p>
+        </div>
+    </footer>
+    <script>
+        let slideIndex = 0;
+        const slides = document.querySelectorAll(".slide");
+
+        function visSlide(index) {
+            slides.forEach(slide => slide.classList.remove("aktiv"));
+
+            if (index >= slides.length) {
+                slideIndex = 0;
+            } else if (index < 0) {
+                slideIndex = slides.length - 1;
+            } else {
+                slideIndex = index;
+            }
+            slides[slideIndex].classList.add("aktiv");
+        }
+        function skiftSlide(retning) {
+            visSlide(slideIndex + retning);
+        }
+    </script>
+</body>
+
+</html>
